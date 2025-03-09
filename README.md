@@ -1,5 +1,6 @@
 # General
 * Just a frontend research project
+* Also it's a part/submodule of docker-compose repository: **comming soon**
 * Project is based on https://artemshumeiko.ru tutorials
 
 # Techstack
@@ -11,4 +12,4 @@
 
 # Run
 * `npm install`
-* `npm run <option>`, option could be either `dev` or  `preview`
+* `npm run <option>`, option could be either `dev` or  `preview` for example...

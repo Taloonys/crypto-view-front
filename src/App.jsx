@@ -5,6 +5,11 @@ import { Menu, Spin} from 'antd';
 import axios from "axios";
 
 
+const apiUrl = `http://localhost:8081/cryptocurrencies`;
+// const apiUrl = `http://host.docker.internal:8081/cryptocurrencies`;
+// const apiUrl = `http://0.0.0.0:8081/cryptocurrencies`;
+
+
 function getItem(label, key, icon, children, type) {
   //
   // Item former helper
@@ -28,7 +33,7 @@ const App = () => {
     //
     // Fetch data by it's id
     //
-    axios.get(`http://127.0.0.1:8081/cryptocurrencies/${currencyId}`)
+    axios.get(`${apiUrl}/${currencyId}`)
       .then(respone => setCurrencyData(respone.data))
       .catch(error => 
         console.log(`Failed to fetch currency, currencyId = ${currencyId}, error: `, error))
@@ -39,7 +44,7 @@ const App = () => {
   };
 
   const fetchCurrencies = () => {
-    axios.get('http://127.0.0.1:8081/cryptocurrencies')
+    axios.get(apiUrl)
       .then(response => {
         //
         // Form currency list with concrete data

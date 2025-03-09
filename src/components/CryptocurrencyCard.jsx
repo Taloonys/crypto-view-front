@@ -7,6 +7,13 @@ function CryptocurrencyCard(props) {
   const volumeChange = Math.round(currency.quote.USD.volume_change_24h * 100) / 100
   const marketDominance = Math.round(currency.quote.USD.market_cap_dominance)
 
+  const volСolor = volumeChange < 0 ? "red" : "green";
+  const prettyVolumeChange = (
+    <span style={{color: volСolor}}> 
+      {volumeChange} % 
+    </span>
+  );
+
   return (
     <div>
       <Card
@@ -17,16 +24,24 @@ function CryptocurrencyCard(props) {
           </div>
           }
 
+        headStyle={{
+          height: 150,
+          fontSize: `32px`
+        }}
+
         style={{
-          width: 300,
+          lineHeight: 2,
+          width: 600,
+          fontSize: `28px`
         }}
       >
         <p>Current quote: {price} $</p>
-        <p>Volume change(24h): {volumeChange} %</p>
-        <p>Market Dominance: {marketDominance} $</p>
+        <p>Volume change (24h): {prettyVolumeChange} </p>
+        <p>Market cap dominance: {marketDominance} %</p>
       </Card>
     </div>
   )
 }
+
 
 export default CryptocurrencyCard

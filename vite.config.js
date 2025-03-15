@@ -34,7 +34,8 @@ export default defineConfig({
       // - inside docker compose network it will be resolved OK
       //
       '/api': {
-        target: 'http://backend:8081',
+        target: 'http://localhost:8081',
+        // target: 'http://backend:8081',
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api/,'/cryptocurrencies/api/v1'),
       }

@@ -5,9 +5,7 @@ import { Menu, Spin} from 'antd';
 import axios from "axios";
 
 
-const apiUrl = `http://localhost:8081/cryptocurrencies`;
-// const apiUrl = `http://host.docker.internal:8081/cryptocurrencies`;
-// const apiUrl = `http://0.0.0.0:8081/cryptocurrencies`;
+const apiUrl = `/api`;
 
 
 function getItem(label, key, icon, children, type) {

@@ -1,15 +1,10 @@
 # General
 * Just a frontend research project
-* Also it's a part/submodule of docker-compose repository: **comming soon**
+* It's a part/submodule of docker-compose reposiory: https://github.com/Taloonys/cmc-crypto-view
 * Project is based on https://artemshumeiko.ru tutorials
 
 # Techstack
-> Prb you have to install them
 * `Npm`
 * `vite.js`
 * `TailwindCSS`
 * `React`
-
-# Run
-* `npm install`
-* `npm run <option>`, option could be either `dev` or  `preview` for example...

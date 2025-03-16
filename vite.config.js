@@ -26,18 +26,18 @@ export default defineConfig({
     //
     // Solution above won't work because of browser's CORS
     //
-    proxy: {
+    // proxy: {
       //
       // That's why i create proxy that:
       // - listen browser's request on `http://localhost:8082/api`
       // - transfer it to '..backend.../api/v1`
       // - inside docker compose network it will be resolved OK
       //
-      '/api': {
-        target: 'http://backend:8081',
-        changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/api/,'/cryptocurrencies/api/v1'),
-      }
-    }
+      // '/api': {
+      //   target: 'http://backend:8081',
+      //   changeOrigin: true,
+      //   rewrite: (path) => path.replace(/^\/api/,'/cryptocurrencies/api/v1'),
+      // }
+    // }
   },
 });
